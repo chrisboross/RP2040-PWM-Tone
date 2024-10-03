@@ -10,7 +10,7 @@
 #include "melodies.h"   // Optional, but ideal location to store custom melodies
 
 // Pin definitions
-#define PIEZO_PIN       0 // The pin the buzzer or speaker is connected to.
+#define PIEZO_PIN       5 // The pin the buzzer or speaker is connected to.
                           // The other terminal of the buzzer is connected to ground.
 
 // Create an instance of the tone generator
@@ -36,13 +36,13 @@ int main() {
 
     // Play one of the preset melodies. The last parameter is the number
     // of repetitions. Set it to -1 to repeat the melody continuously.
-    melody(&generator, RINGTONE_1, 3);
-    while(generator.playing) { sleep_ms(2); }
+    //melody(&generator, RINGTONE_1, 3);
+    //while(generator.playing) { sleep_ms(2); }
 
     sleep_ms(500);
 
     // Play a longer melody
-    melody(&generator, HAPPY_BIRTHDAY, 0);
+    melody(&generator, RIDE, 3);
 
     // Wait while the melody plays
     while(generator.playing) { sleep_ms(2); }
@@ -54,7 +54,7 @@ int main() {
 
     // Use this function to speed up or down your melodies.
     // Default tempo is 120bpm. Tempo does not affect tone().
-    set_tempo(160);
+    set_tempo(150);
 
     // This is an example sound effect. Each note defines a pitch (float, in Hz)
     // and a duration (expressed in subdivisions of a whole note). This means that
