@@ -70,7 +70,7 @@ int main() {
     };
 
     // Let's play the sfx we just defined, repeating it twice
-    melody(&generator, sfx, 2);
+    // melody(&generator, sfx, 2);
 
     while (true) {
         tight_loop_contents(); // Nothing to do here
